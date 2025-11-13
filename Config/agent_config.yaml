@@ -1,0 +1,33 @@
+# 🐱 Agent专用配置文件
+# 用于配置中间件、检查点和性能参数
+
+agent:
+  # 中间件配置
+  middleware:
+    summarization:
+      enabled: true
+      max_tokens_before_summary: 30000
+      messages_to_keep: 15
+      
+    context_editing:
+      enabled: true
+      clear_tool_uses_trigger: 30000
+      keep_tool_uses: 10
+      
+    approval:
+      enabled: true
+  
+  # 检查点配置
+  checkpointer:
+    default: "SQLite"
+    sqlite:
+      database_path: "Data/Agent.db"
+      check_same_thread: false
+    memory:
+      enabled: true
+  
+  # 性能配置
+  performance:
+    recursion_limit: 300
+    stream_mode: "messages"
+    state_recovery: true
