@@ -32,7 +32,7 @@ GPT_OSS = create_ollama_client({
 
 QWEN3_MINI = create_ollama_client({
     "model": "qwen3",
-    "reasoning": "false",
+    "reasoning": "true",
     "temperature": 0.666,
     "num_ctx": 8192,
     "num_predict": 4096,

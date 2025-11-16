@@ -775,9 +775,9 @@ def _get_http_impl(
             else:
                 # 非200状态码
                 return {
-                    'success': True,  # 请求成功，只是服务器返回错误
+                    'success': False,  # 请求失败
                     'status_code': response.status_code,
-                    'content': response.text,
+                    'content': '', # 清空上下文
                     'headers': dict(response.headers),
                     'url': response.url,
                     'encoding': response.encoding,

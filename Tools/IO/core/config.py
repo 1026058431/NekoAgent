@@ -45,7 +45,7 @@ class IOConfig:
     @property
     def SAFEBOX_DIR(self) -> str:
         """保险箱目录名"""
-        return "Neko_SafeBox"
+        return "SafeBox"
     
     @property
     def SAFEBOX_PATH(self) -> str:
